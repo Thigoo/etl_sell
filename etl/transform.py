@@ -9,10 +9,7 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
     # delete rows with missing in data keys columns
     df = df.dropna(subset=['Data da Venda', 'Produto', 'Quantidade Vendida', 'Valor Unitário'])
 
-<<<<<<< HEAD
     df = df.copy()
-=======
->>>>>>> origin/main
     df['Data da Venda'] = pd.to_datetime(df['Data da Venda'], errors='coerce')
     df.dropna(subset=['Data da Venda'])
 
