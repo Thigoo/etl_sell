@@ -1,0 +1,9 @@
+Data da Venda,Produto,Quantidade Vendida,Valor Unitário,Observações
+2024-01-01,Produto A,10.0,5.5,
+2024-01-03,Produto B,,12.0,Faltou quantidade
+2024-01-04,Produto C,7.0,,Erro no sistema
+2024-01-01,Produto A,10.0,,
+2024-01-03,Produto B,15.0,,
+2024-01-01,Produto A,10.0,5.5,
+2024-01-02,Produto B,8.0,12.0,
+2024-01-03,Produto C,5.0,7.25,
