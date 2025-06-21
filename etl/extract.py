@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-def extract_csv_data(folder: str) -> pd.DataFrame:
+def extract_data(folder: str) -> pd.DataFrame:
     if not os.path.exists(folder):
         raise FileNotFoundError(f'Folder {folder} was not searched')
     files = [f for f in os.listdir(folder) if f.endswith('.csv')]
