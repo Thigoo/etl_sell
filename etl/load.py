@@ -1,14 +1,14 @@
 import sqlite3
 import pandas as pd
 
-def load_data(df: pd.DataFrame, db_path: str = 'database/sells.db'):
+def load_data(df: pd.DataFrame, db_path: str = 'database/sales.db'):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     cursor.execute('''
-        CREATE TABLE IF NOT EXISTS vendas (
+        CREATE TABLE IF NOT EXISTS sales (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            sell_date DATE,
+            sale_date DATE,
             product TEXT,
             amount INTEGER,
             unit_value REAL,
@@ -19,7 +19,7 @@ def load_data(df: pd.DataFrame, db_path: str = 'database/sells.db'):
     # insert data in the table
     for _, row in df.iterrows():
         cursor.execute('''
-            INSERT INTO vendas (sell_date, product, amount, unit_value, total_value)
+            INSERT INTO sales (sale_date, product, amount, unit_value, total_value)
             VALUES (?, ?, ?, ?, ?)
         ''', (
             str(row['Data da Venda'].date()),
